@@ -1,73 +1,182 @@
-# Welcome to your Lovable project
+🌩️ Automated-analysis-of-cloud-server-configuration (Cloud Fit Finder)
 
-## Project info
+Cloud Fit Finder is a rule-based cloud recommendation web application that helps users choose the best-fit cloud services (AWS / Azure / GCP) based on their requirements — such as compute needs, storage, database, security, cost, and scalability.
 
-**URL**: https://lovable.dev/projects/a2adc9d8-6364-45b8-aaf3-cf0c548a3b25
+The app minimizes user effort by using adaptive questioning (MCQ/MSQ) and a scoring-based recommendation engine to suggest optimized cloud services instead of forcing users to answer long questionnaires.
 
-## How can I edit this code?
+## 📸 Screenshots
 
-There are several ways of editing your application.
+![Home](public/images/1.png)
+![cff](public/images/2.png)
+![cff](public/images/3.png)
+![cff](public/images/4.png)
 
-**Use Lovable**
+🚀 Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a2adc9d8-6364-45b8-aaf3-cf0c548a3b25) and start prompting.
+🔍 Cloud Recommendation Engine
 
-Changes made via Lovable will be committed automatically to this repo.
+Suggests optimal Compute, Storage, Database, Networking, Security services
 
-**Use your preferred IDE**
+Supports AWS, Azure, and GCP
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Uses rule-based + weighted scoring logic
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🧠 Smart Question Flow
 
-Follow these steps:
+Asks only necessary questions
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Dynamically decides the next question based on previous answers
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Reduces user input time
 
-# Step 3: Install the necessary dependencies.
-npm i
+📊 Scoring-Based Ranking
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+CPU, RAM, Cost, Compliance, Scalability scores
+
+Produces ranked recommendations with justification
+
+🔐 Supabase Integration
+
+Authentication
+
+Data storage (user responses, recommendations)
+
+🎨 Modern UI
+
+Built with React + TypeScript
+
+Styled using Tailwind CSS
+
+Toast notifications and responsive design
+
+🏗️ Project Structure
+cloud-fit-finder/
+│
+├── public/                     # Static assets
+│
+├── src/
+│   ├── components/             # Reusable UI components
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── use-mobile.tsx
+│   │   └── use-toast.ts
+│   │
+│   ├── integrations/
+│   │   └── supabase/            # Supabase client & helpers
+│   │
+│   ├── lib/                     # Utility functions & logic
+│   ├── pages/                   # Application pages / views
+│   │
+│   ├── App.tsx                  # Root component
+│   ├── App.css
+│   ├── main.tsx                 # Entry point
+│   ├── index.css
+│   └── vite-env.d.ts
+│
+├── supabase/                    # Supabase configuration
+│
+├── .env                         # Environment variables
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── bun.lockb
+├── tailwind.config.ts
+├── postcss.config.js
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── eslint.config.js
+├── components.json
+├── index.html
+└── README.md
+
+🧩 Tech Stack
+Frontend
+
+React + TypeScript
+
+Vite
+
+Tailwind CSS
+
+Shadcn/UI (components.json)
+
+Backend / Services
+
+Supabase (Auth + Database)
+
+Rule-based recommendation logic (client-side / lib)
+
+⚙️ Recommendation Logic (High Level)
+
+User answers MCQ / MSQ questions
+
+Answers are mapped to weights
+
+Each cloud service gets scores:
+
+CPU Score
+
+RAM Score
+
+Cost Score
+
+Compliance Score
+
+Scalability Score
+
+Total Score is calculated
+
+Services are ranked and shown with justification
+
+Example output:
+
+Rank	Provider	Service	Total Score	Reason
+1	AWS	EC2 m6i.large	88.7	Best cost-to-performance
+2	GCP	n2-standard-4	84.5	Better for scaling
+3	Azure	D2s v3	82.1	Balanced option
+🔐 Environment Variables
+
+Create a .env file in the root:
+
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+▶️ Running the Project
+Install dependencies
+npm install
+# or
+bun install
+
+Start development server
 npm run dev
-```
+# or
+bun dev
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+App will be available at:
 
-**Use GitHub Codespaces**
+http://localhost:5173
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+📌 Future Enhancements
 
-## What technologies are used for this project?
+🔄 Real-time pricing fetch from AWS / Azure / GCP APIs
 
-This project is built with:
+🤖 ML-based recommendation (hybrid with rule engine)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📈 Cost simulation dashboard
 
-## How can I deploy this project?
+📄 Export recommendations as PDF / report
 
-Simply open [Lovable](https://lovable.dev/projects/a2adc9d8-6364-45b8-aaf3-cf0c548a3b25) and click on Share -> Publish.
+🌍 Region-based optimization
 
-## Can I connect a custom domain to my Lovable project?
+🧪 A/B testing for question flow
 
-Yes, you can!
+👩‍💻 Author
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Monasri
+B.Tech – Artificial Intelligence & Data Science
+Focused on Cloud Computing, AI Systems, and Recommendation Engines
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+⭐ If you like this project
+
+Give it a ⭐ on GitHub and feel free to fork & extend it!
