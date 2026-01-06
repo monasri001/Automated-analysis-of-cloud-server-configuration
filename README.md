@@ -5,11 +5,11 @@ Cloud Fit Finder is a rule-based cloud recommendation web application that helps
 The app minimizes user effort by using adaptive questioning (MCQ/MSQ) and a scoring-based recommendation engine to suggest optimized cloud services instead of forcing users to answer long questionnaires.
 
 ## 📸 Screenshots
-
-![Home](public/images/1.png)
-![cff](public/images/2.png)
-![cff](public/images/3.png)
 ![cff](public/images/4.png)
+![cff](public/images/3.png)
+![cff](public/images/2.png)
+![Home](public/images/1.png)
+
 
 🚀 Key Features
 
