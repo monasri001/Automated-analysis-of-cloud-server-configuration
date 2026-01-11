@@ -10,6 +10,20 @@ The app minimizes user effort by using adaptive questioning (MCQ/MSQ) and a scor
 ![cff](public/images/2.png)
 ![Home](public/images/1.png)
 
+services
+Compute
+
+Storage
+
+Network
+
+Database
+
+Security
+
+Monitoring
+
+Budget
 
 🚀 Key Features
 
